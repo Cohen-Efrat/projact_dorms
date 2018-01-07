@@ -19,6 +19,15 @@ namespace projact_dorms.Models
             var server = client.GetServer();
             Database = server.GetDatabase(DataBaseName);
         }
+        public MongoCollection<ApprovalKit> ApprovalKit
+        {
+            get
+            {
+                var ApprovalKitcollaction = Database.GetCollection<ApprovalKit>("ApprovalKit");
+                return ApprovalKitcollaction;
+            }
+
+        }
 
         public MongoCollection<User> Users
         {
@@ -29,5 +38,8 @@ namespace projact_dorms.Models
             }
 
         }
+        
+
+
     }
 }

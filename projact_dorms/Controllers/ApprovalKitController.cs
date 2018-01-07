@@ -9,23 +9,24 @@ using MongoDB.Driver.Builders;
 
 namespace projact_dorms.Controllers
 {
-    public class UserController : Controller
+    public class ApprovalKitController : Controller
     {
+
 
         private readonly DBmanger Context = new DBmanger();
 
         // GET: User
         public ActionResult Index()
         {
-            var Users = Context.Users.FindAll().SetSortOrder(SortBy<User>.Ascending(u => u.Email));
-            return View(Users);
+            var Approv = Context.ApprovalKit.FindAll().SetSortOrder(SortBy<ApprovalKit>.Ascending(u => u.Last_name));
+            return View(Approv);
         }
 
         // GET: User/Details/5
         public ActionResult Details(String Id)
         {
-            var User = Context.Users.FindOneById(new ObjectId(Id));
-            return View(User);
+            var Approv = Context.ApprovalKit.FindOneById(new ObjectId(Id));
+            return View(Approv);
         }
 
         // GET: User/Create
@@ -36,11 +37,11 @@ namespace projact_dorms.Controllers
 
         // POST: User/Create
         [HttpPost]
-        public ActionResult Create(User _user)
+        public ActionResult Create(ApprovalKit Approv)
         {
             if (ModelState.IsValid)
             {
-                Context.Users.Save(_user);
+                Context.ApprovalKit.Save(Approv);
                 return RedirectToAction("index");
             }
             return View();
@@ -49,18 +50,18 @@ namespace projact_dorms.Controllers
         // GET: User/Edit/5
         public ActionResult Edit(String Id)
         {
-            var User = Context.Users.FindOneById(new ObjectId(Id));
-            return View(User);
+            var Approv = Context.ApprovalKit.FindOneById(new ObjectId(Id));
+            return View(Approv);
         }
 
 
         // POST: User/Edit/5
         [HttpPost]
-        public ActionResult Edit(User _user)
+        public ActionResult Edit(ApprovalKit Approv)
         {
             if (ModelState.IsValid)
             {
-                Context.Users.Save(_user);
+                Context.ApprovalKit.Save(Approv);
                 return RedirectToAction("index");
             }
             return View();
@@ -70,7 +71,7 @@ namespace projact_dorms.Controllers
         // GET: User/Delete/5
         public ActionResult Delete(String Id)
         {
-            var rental = Context.Users.FindOneById(new ObjectId(Id));
+            var rental = Context.ApprovalKit.FindOneById(new ObjectId(Id));
             return View(rental);
         }
 
@@ -78,10 +79,9 @@ namespace projact_dorms.Controllers
         [HttpPost, ActionName("Delete")]
         public ActionResult DeleteConfirmed(String Id)
         {
-            var rental = Context.Users.Remove(Query.EQ("_id", new ObjectId(Id)));
+            var rental = Context.ApprovalKit.Remove(Query.EQ("_id", new ObjectId(Id)));
             return RedirectToAction("Index");
 
         }
     }
 }
-

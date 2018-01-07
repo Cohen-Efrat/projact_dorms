@@ -161,11 +161,13 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\ApprovalKitController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\ApprovalKit.cs" />
     <Compile Include="Models\DBmanger.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -212,6 +214,11 @@
     <Content Include="Views\User\Edit.cshtml" />
     <Content Include="Views\User\Delete.cshtml" />
     <Content Include="Views\User\Details.cshtml" />
+    <Content Include="Views\ApprovalKit\Index.cshtml" />
+    <Content Include="Views\ApprovalKit\Details.cshtml" />
+    <Content Include="Views\ApprovalKit\Create.cshtml" />
+    <Content Include="Views\ApprovalKit\Edit.cshtml" />
+    <Content Include="Views\ApprovalKit\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
