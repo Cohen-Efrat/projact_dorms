@@ -38,7 +38,16 @@ namespace projact_dorms.Models
             }
 
         }
-        
+
+        public MongoCollection<FaultForm> Fault
+        {
+            get
+            {
+                var Usercollaction = Database.GetCollection<User>("FaultForm");
+                return Usercollaction;
+            }
+
+        }
 
 
     }
