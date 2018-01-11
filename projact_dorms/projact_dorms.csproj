@@ -162,13 +162,18 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\ApprovalKitController.cs" />
+    <Compile Include="Controllers\FaultFormController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\RegistrationFormController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\ApprovalKit.cs" />
+    <Compile Include="Models\Class1.cs" />
     <Compile Include="Models\DBmanger.cs" />
+    <Compile Include="Models\FaultForm.cs" />
+    <Compile Include="Models\RegistrationForm.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -214,11 +219,24 @@
     <Content Include="Views\User\Edit.cshtml" />
     <Content Include="Views\User\Delete.cshtml" />
     <Content Include="Views\User\Details.cshtml" />
+    <Content Include="Views\FaultForm\Index.cshtml" />
+    <Content Include="Views\FaultForm\Details.cshtml" />
+    <Content Include="Views\FaultForm\Create.cshtml" />
+    <Content Include="Views\FaultForm\Edit.cshtml" />
+    <Content Include="Views\FaultForm\Delete.cshtml" />
+    <Content Include="Views\RegistrationForm\Index.cshtml" />
+    <Content Include="Views\RegistrationForm\Details.cshtml" />
+    <Content Include="Views\RegistrationForm\Create.cshtml" />
+    <Content Include="Views\RegistrationForm\Edit.cshtml" />
+    <Content Include="Views\RegistrationForm\Delete.cshtml" />
     <Content Include="Views\ApprovalKit\Index.cshtml" />
     <Content Include="Views\ApprovalKit\Details.cshtml" />
     <Content Include="Views\ApprovalKit\Create.cshtml" />
     <Content Include="Views\ApprovalKit\Edit.cshtml" />
     <Content Include="Views\ApprovalKit\Delete.cshtml" />
+    <Content Include="Views\User\LogIN.cshtml" />
+    <Content Include="Views\Shared\notuser.cshtml" />
+    <Content Include="Views\User\SingUp.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
